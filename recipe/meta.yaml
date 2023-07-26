@@ -27,7 +27,7 @@ requirements:
     - python >=3.8
     - cltoolbox >=2.0.0,<3.0.0
     - typing-extensions
-    - toolbox_utils >=3.0.0,<4.0.0
+    - toolbox_utils >=5.0.0,<6.0.0
     - numpy
     - pandas
 

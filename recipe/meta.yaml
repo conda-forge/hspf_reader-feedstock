@@ -1,5 +1,5 @@
 {% set name = "hspf_reader" %}
-{% set version = "1.0.7" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hspf_reader-{{ version }}.tar.gz
-  sha256: 9811d1db2a9a22955e68f2aca7d171df95caab80f2741bbcbcdc804296390057
+  sha256: 1b03f3a24028335935776ccf0a2787d64318a6b13a1fb14c4ad65b57fa711dba
 
 build:
   entry_points:
@@ -24,12 +24,24 @@ requirements:
     - wheel
     - pip
   run:
-    - python >=3.8
     - cltoolbox >=2.0.0,<3.0.0
-    - typing-extensions
-    - toolbox_utils >=5.0.0,<6.0.0
+    - dateparser
+    - matplotlib-base >=3.3.2
     - numpy
+    - openpyxl >=3.0.7
+    - odfpy >=1.4.1
     - pandas
+    - pint !=0.21
+    - pint-pandas
+    - pydantic
+    - python >=3.8
+    - pytables >=3.6.1
+    - pyxlsb >=1.0.8
+    - scipy
+    - tabulate
+    - typing-extensions
+    - xlrd >=2.0.1
+    - xlsxwriter
 
 test:
   imports:

@@ -1,5 +1,5 @@
 {% set name = "hspf_reader" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hspf_reader-{{ version }}.tar.gz
-  sha256: 1b03f3a24028335935776ccf0a2787d64318a6b13a1fb14c4ad65b57fa711dba
+  sha256: 07268b45d42191796b09fffd72f82aa1199eb5e6ed2b7a4fb511baf5fd005e9b
 
 build:
   entry_points:

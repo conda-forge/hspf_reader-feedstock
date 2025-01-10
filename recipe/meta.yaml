@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hspf_reader-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hspf_reader-{{ version }}.tar.gz
   sha256: 0aee1da85cd39e899ba2ae38dd31f3a156d9a8ac898cfb73dfc57113a6da643f
 
 build:
@@ -14,11 +14,11 @@ build:
     - hspf_reader = hspf_reader.hspf_reader:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=45
     - setuptools-scm >=6.2
     - wheel
@@ -34,7 +34,7 @@ requirements:
     - pint !=0.21
     - pint-pandas
     - pydantic
-    - python >=3.8
+    - python >={{ python_min }}
     - pytables >=3.6.1
     - pyxlsb >=1.0.8
     - scipy
@@ -51,6 +51,7 @@ test:
     - hspf_reader --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   summary: Command line script and Python library to read HSPF WDM, binary, and plotgen time series.

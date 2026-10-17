@@ -13,7 +13,7 @@ source:
   sha256: 940df0a3208c1de4da175800283b08c174527998ccba3090e91d45566adfdfb0
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps
   python:
@@ -28,9 +28,9 @@ requirements:
     - wheel
     - pip
   run:
-    - cltoolbox >=2.0.0,<3.0.0
+    - python >=3.10
+    - cltoolbox >=2.0.0
     - dateparser
-    - matplotlib-base >=3.3.2
     - numpy
     - openpyxl >=3.0.7
     - odfpy >=1.4.1
@@ -38,8 +38,6 @@ requirements:
     - pint !=0.21
     - pint-pandas
     - pydantic
-    - python >=${{ python_min }}
-    - pytables >=3.6.1
     - pyxlsb >=1.0.8
     - scipy
     - tabulate
